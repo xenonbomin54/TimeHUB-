@@ -1,0 +1,15 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /rooms/{roomId} {
+      allow read: if true;
+      allow create: if request.resource.data.keys().hasAll(['id','name','days','timeStart','timeEnd','createdAt']);
+      allow update, delete: if false;
+
+      match /participants/{nickname} {
+        allow read: if true;
+        allow write: if request.resource.data.keys().hasAll(['nickname','unavailable']);
+      }
+    }
+  }
+}
