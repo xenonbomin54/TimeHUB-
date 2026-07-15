@@ -77,7 +77,7 @@ export function RoomView() {
           >
             {room.id}
           </div>
-          <h1 style={{ fontSize: "26px", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "4px" }}>
+          <h1 style={{ fontSize: "36px", fontWeight: 800, letterSpacing: "-0.02em", marginBottom: "4px" }}>
             {room.name}
           </h1>
           <p className="text-muted-foreground" style={{ fontSize: "13px" }}>
