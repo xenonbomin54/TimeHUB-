@@ -247,7 +247,7 @@ export function RoomView() {
               참여자 ({total}명)
             </p>
             {total === 0 ? (
-              <p className="text-muted-foreground" style={{ fontSize: "13px" }}>
+              <p style={{ fontSize: "13px" }}>
                 아직 아무도 참여하지 않았어요
               </p>
             ) : (
@@ -256,11 +256,10 @@ export function RoomView() {
                   <div
                     key={p.nickname}
                     className="flex items-center justify-between px-3 py-2 bg-secondary"
-                    style={{ borderRadius: "7px" }}
+                    style={{ borderRadius: "7px", background: "#bac6ff", color: "#000" }}
                   >
                     <span style={{ fontSize: "13px", fontWeight: 500 }}>{p.nickname}</span>
                     <span
-                      className="text-muted-foreground"
                       style={{ fontSize: "10px" }}
                     >
                       불가 {p.unavailable.length}칸
