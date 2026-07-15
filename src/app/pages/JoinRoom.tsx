@@ -103,11 +103,11 @@ export function JoinRoom() {
         <div className="mb-8">
           <div
             className="inline-block mb-4 px-3 py-1 border border-border text-muted-foreground"
-            style={{ fontFamily: "'DM Mono', monospace", fontSize: "10px", letterSpacing: "0.15em" }}
+            style={{ fontSize: "10px", letterSpacing: "0.15em" }}
           >
             {room.id}
           </div>
-          <h1 style={{ fontFamily: "'Noto Serif KR', serif", fontSize: "24px", fontWeight: 700, marginBottom: "6px" }}>
+          <h1 style={{ fontSize: "24px", fontWeight: 700, marginBottom: "6px" }}>
             {room.name}
           </h1>
           <p className="text-muted-foreground" style={{ fontSize: "13px" }}>
@@ -116,7 +116,7 @@ export function JoinRoom() {
         </div>
 
         <div className="mb-6">
-          <label className="block mb-2" style={{ fontSize: "13px", fontWeight: 600 }}>
+          <label className="block mb-2" style={{ fontSize: "13px", fontWeight: 600, borderRadius: "7px" }}>
             닉네임을 입력하세요
           </label>
           <input
@@ -136,8 +136,8 @@ export function JoinRoom() {
           {nameError && <p className="mt-1.5 text-destructive" style={{ fontSize: "12px" }}>{nameError}</p>}
         </div>
 
-        <div className="p-4 bg-secondary border border-border mb-8">
-          <p className="text-muted-foreground" style={{ fontSize: "13px", lineHeight: 1.7 }}>
+        <div className="p-4 border border-border mb-8" style={{ borderRadius: "7px", background: "#cfd7ff" }}>
+          <p style={{ fontSize: "13px", lineHeight: 1.7, color: "#000" }}>
             로그인이 필요 없어요. 닉네임으로 바로 참여하세요.
             다음 화면에서 <strong>참여할 수 없는 시간대</strong>를 선택합니다.
           </p>
@@ -148,8 +148,8 @@ export function JoinRoom() {
             if (!nickname.trim()) { setNameError("닉네임을 입력하세요"); return; }
             setStep("grid");
           }}
-          className="w-full py-3.5 bg-primary text-primary-foreground hover:opacity-80 transition-opacity"
-          style={{ fontSize: "15px", fontWeight: 600 }}
+          className="w-full py-3.5 text-primary-foreground hover:opacity-80 transition-opacity"
+          style={{ fontSize: "15px", fontWeight: 600, borderRadius: "7px", background: "#3355ff" }}
         >
           다음 →
         </button>
@@ -165,7 +165,7 @@ export function JoinRoom() {
     >
       <div className="mb-6 flex items-start justify-between flex-wrap gap-4">
         <div>
-          <h2 style={{ fontFamily: "'Noto Serif KR', serif", fontSize: "20px", fontWeight: 700, marginBottom: "4px" }}>
+          <h2 style={{ fontSize: "30px", fontWeight: 700, marginBottom: "4px" }}>
             {room.name}
           </h2>
           <p className="text-muted-foreground" style={{ fontSize: "13px" }}>
@@ -267,7 +267,7 @@ export function JoinRoom() {
           <button
             onClick={() => setUnavailable(new Set())}
             className="px-4 py-2.5 border border-border hover:bg-secondary transition-colors"
-            style={{ fontSize: "13px" }}
+            style={{ fontSize: "13px", fontWeight: 600, borderRadius: "7px", background: "#cfd7fd" }}
           >
             초기화
           </button>
@@ -275,7 +275,7 @@ export function JoinRoom() {
             onClick={handleSubmit}
             disabled={submitting}
             className="px-6 py-2.5 bg-primary text-primary-foreground hover:opacity-80 transition-opacity disabled:opacity-50"
-            style={{ fontSize: "13px", fontWeight: 600 }}
+            style={{ fontSize: "13px", fontWeight: 600, borderRadius: "7px", background: "#3355ff"}}
           >
             {submitting ? "제출 중..." : "제출하기 →"}
           </button>
