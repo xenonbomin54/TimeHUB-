@@ -41,7 +41,7 @@ export function Home() {
         {/* Create */}
         <div
           className="flex flex-col items-center p-7 text-white  text-center"
-          style={{ borderRadius: "15px", background: "#3355ff", margin: "20px" }}
+          style={{ borderRadius: "15px", background: "#3355ff", margin: "20px", boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)" }}
         >
           <div className="text-3xl mb-4"></div>
           <div style={{ fontWeight: 700, fontSize: "17px", marginBottom: "6px" }}>방 만들기</div>
@@ -62,7 +62,7 @@ export function Home() {
         <form
           onSubmit={handleJoin}
           className="flex flex-col items-center p-7 text-white  text-center"
-          style={{ borderRadius: "15px", background: "#3355ff", margin: "20px" }}
+          style={{ borderRadius: "15px", background: "#3355ff", margin: "20px", boxShadow: "0 4px 12px rgba(0, 0, 0, 0.3)" }}
         >
           <div className="text-3xl mb-4"></div>
           <div style={{ fontWeight: 700, fontSize: "17px", marginBottom: "6px" }}>코드로 참여</div>
